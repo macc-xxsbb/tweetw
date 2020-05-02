@@ -1,0 +1,9 @@
+.contents-row
+  .container
+    = form_for [@tweet, ] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: '今何してる？'
+        %h3
+          投稿する
+      = current_user.name 
+      = f.text_area :text, class: 'hidden'
+      = f.submit 'つぶやく', class: 'form__submit'
